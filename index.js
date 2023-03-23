@@ -15,9 +15,27 @@ functionaddItem(){
     divParent.className = "item";
     divChild.innerHTML = '<div>'+input.value+'</div>';
 
-    checkIcon.className = "fas fa-check-square";
+    checkIcon.className = "fa-solid fa-square-check";
     checkIcon.style.color = "lightgray";
     checkIcon.addEventListener("click", function(){
-        checkIcon.style.color = "limegreen"
+        checkIcon.style.color = "limegreen";
     })
+
+    divChild.appendChild(checkIcon);
+
+    trashIcon.className = "fa-solid fa-trash";
+    trashIcon.style.color = "darkgray";
+    trashIcon.addEventListener("click", function(){
+        divParent.remove();
+    })
+
+    divChild.appendChild(trashIcon);
+
+    divParent.appendChild(divChild);
+
+    toDoItems.appendChild(divParent);
+    
+    input.value = '';
+
+
 }
