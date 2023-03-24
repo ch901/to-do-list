@@ -3,10 +3,10 @@ const input = document.getElementById("input");
 const trashIcon = document.getElementById("trash");
 
 input.addEventListener("keydown", function(event){
-    if (event.key === "enter");
+    if (event.key === "enter")
     addItem();
 })
-functionaddItem(){
+function addItem(){
     var divParent = document.createElement("div");
     var divChild = document.createElement("div");
     var checkIcon = document.createElement("i");
